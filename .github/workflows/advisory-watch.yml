@@ -1,0 +1,14 @@
+name: advisory-watch
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scaffold status
+        run: |
+          echo "advisory-watch scaffold: the workflow interface is defined, and the polling engine is the next build step."
